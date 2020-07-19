@@ -6,7 +6,7 @@ import sys
 
 def create_rel_path():
     abs_path = os.path.dirname(__file__)
-    dirname_string = abs_path[:abs_path.find(r"/github")]
+    dirname_string = abs_path[:abs_path.find("\github")]
     dirname_path = os.path.normpath(dirname_string)
     path_for_train = os.path.join(dirname_path , "dataset","traindata","traindata")
     path_for_validation = os.path.join(dirname_path , 'dataset','corss validation')
@@ -77,4 +77,4 @@ def procc_folder_women(path_to_take_from, path_to_save_in):
     print("saved ",num," images of women in",path_to_save_in)
 
 
-preprocess_forDir()
+
