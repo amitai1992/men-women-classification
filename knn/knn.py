@@ -71,7 +71,7 @@ liy = []
 index=0
 acc=0
 from sklearn.neighbors import KNeighborsClassifier
-for k in range(1, 45):
+for k in range(1, 75):
     print("k = " + str(k))
     neigh = KNeighborsClassifier(n_neighbors=k)
     neigh.fit(X_train, y_train)
@@ -84,7 +84,7 @@ for k in range(1, 45):
 plt.plot(lix, liy)
 plt.show()
 print("max acc at k="+str(index+1)+" acc of "+str(acc))
-neigh = KNeighborsClassifier(n_neighbors=43)
+neigh = KNeighborsClassifier(n_neighbors=index+1)
 neigh.fit(X_train, y_train)
 print("Test Accuracy: "+str(neigh.score(X_test, y_test)))
 
